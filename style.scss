@@ -4,7 +4,6 @@
 
 body {
   color: var(--text-color);
-  height: 100vh;
   font-family: "Montserrat", sans-serif;
   background: #13102b;
   background: linear-gradient(
@@ -20,6 +19,9 @@ body {
     rgba(35, 31, 82, 1) 70%,
     rgba(35, 31, 82, 1) 100%
   );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 h1 {
@@ -37,22 +39,34 @@ a {
 }
 
 .container {
+  grid-row-gap: 48px;
+  padding: 0 24px;
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 48px;
-  width: 1120px;
-  margin: auto;
+  width: 100%;
+  max-width: 1120px;
+  margin: 48px auto;
 }
 
 header {
   text-align: center;
-  margin: 48px 0;
+  margin: 0;
   grid-column-start: 3;
   grid-column-end: 10;
+  @media screen and (max-width: 768px) {
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
 
   p {
     font-size: 18px;
   }
+}
+
+i[data-feather] {
+  width: 2em;
+  height: 2em;
 }
 
 .section-block {
@@ -66,11 +80,17 @@ header {
     grid-column-start: 1;
     grid-column-end: 13;
   }
+  img {
+    max-width: 100%;
+  }
 }
 
 .project-item {
   grid-column: span 3;
   font-weight: 300;
+  @media screen and (max-width: 768px) {
+    grid-column: span 12;
+  }
   h3 {
     font-size: 18px;
     margin: 0 0 4px;
@@ -88,6 +108,9 @@ header {
 .person-item {
   grid-column: span 3;
   font-weight: 300;
+  @media screen and (max-width: 768px) {
+    grid-column: span 12;
+  }
   h3 {
     font-size: 16px;
     margin: 0 0 4px;
