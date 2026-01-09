@@ -1,0 +1,89 @@
+:root {
+  --text-color: #fff;
+}
+
+body {
+  color: var(--text-color);
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background: #13102b;
+  background: linear-gradient(180deg, rgb(19, 16, 43) 0%, rgb(19, 16, 43) 25%, rgb(24, 20, 53) 25%, rgb(24, 20, 53) 41%, rgb(28, 24, 61) 41%, rgb(28, 24, 61) 54%, rgb(30, 27, 70) 54%, rgb(30, 27, 70) 70%, rgb(35, 31, 82) 70%, rgb(35, 31, 82) 100%);
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0;
+}
+
+a {
+  color: var(--text-color);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 48px;
+  width: 1120px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  margin: 48px 0;
+  grid-column-start: 3;
+  grid-column-end: 10;
+}
+header p {
+  font-size: 18px;
+}
+
+.section-block {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.section-block h2 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+}
+
+.project-item {
+  grid-column: span 3;
+  font-weight: 300;
+}
+.project-item h3 {
+  font-size: 18px;
+  margin: 0 0 4px;
+  font-weight: 300;
+}
+.project-item p {
+  font-size: 13px;
+  margin: 0;
+}
+.project-item .description {
+  margin: 16px 0;
+}
+
+.person-item {
+  grid-column: span 3;
+  font-weight: 300;
+}
+.person-item h3 {
+  font-size: 16px;
+  margin: 0 0 4px;
+  font-weight: 300;
+}
+.person-item p {
+  font-size: 13px;
+  margin: 0;
+}
+.person-item .description {
+  margin: 16px 0;
+}/*# sourceMappingURL=style.css.map */

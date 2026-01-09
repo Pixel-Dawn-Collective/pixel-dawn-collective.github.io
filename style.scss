@@ -1,0 +1,103 @@
+:root {
+  --text-color: #fff;
+}
+
+body {
+  color: var(--text-color);
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background: #13102b;
+  background: linear-gradient(
+    180deg,
+    rgba(19, 16, 43, 1) 0%,
+    rgba(19, 16, 43, 1) 25%,
+    rgba(24, 20, 53, 1) 25%,
+    rgba(24, 20, 53, 1) 41%,
+    rgba(28, 24, 61, 1) 41%,
+    rgba(28, 24, 61, 1) 54%,
+    rgba(30, 27, 70, 1) 54%,
+    rgba(30, 27, 70, 1) 70%,
+    rgba(35, 31, 82, 1) 70%,
+    rgba(35, 31, 82, 1) 100%
+  );
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0;
+}
+
+a {
+  color: var(--text-color);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 48px;
+  width: 1120px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  margin: 48px 0;
+  grid-column-start: 3;
+  grid-column-end: 10;
+
+  p {
+    font-size: 18px;
+  }
+}
+
+.section-block {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  h2 {
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
+}
+
+.project-item {
+  grid-column: span 3;
+  font-weight: 300;
+  h3 {
+    font-size: 18px;
+    margin: 0 0 4px;
+    font-weight: 300;
+  }
+  p {
+    font-size: 13px;
+    margin: 0;
+  }
+  .description {
+    margin: 16px 0;
+  }
+}
+
+.person-item {
+  grid-column: span 3;
+  font-weight: 300;
+  h3 {
+    font-size: 16px;
+    margin: 0 0 4px;
+    font-weight: 300;
+  }
+  p {
+    font-size: 13px;
+    margin: 0;
+  }
+  .description {
+    margin: 16px 0;
+  }
+}
