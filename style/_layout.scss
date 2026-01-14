@@ -1,5 +1,29 @@
 @use "tokens";
 
+.bg-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background: linear-gradient(
+    180deg,
+    rgba(19, 16, 43, 1) 0%,
+    rgba(19, 16, 43, 1) 25%,
+    rgba(24, 20, 53, 1) 25%,
+    rgba(24, 20, 53, 1) 41%,
+    rgba(28, 24, 61, 1) 41%,
+    rgba(28, 24, 61, 1) 54%,
+    rgba(30, 27, 70, 1) 54%,
+    rgba(30, 27, 70, 1) 70%,
+    rgba(35, 31, 82, 1) 70%,
+    rgba(35, 31, 82, 1) 100%
+  );
+
+  /* iOS stability */
+  transform: translateZ(0);
+  will-change: transform;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr;

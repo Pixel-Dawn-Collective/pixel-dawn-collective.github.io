@@ -1,5 +1,6 @@
 :root {
   --color-text: #ffffff;
+  --color-text-hover: #cccccc;
   --color-bg-primary: #13102b;
   --color-bg-secondary: #181435;
   --color-link: #ffffff;
@@ -16,6 +17,16 @@
   --space-xl: 48px;
   --grid-columns: 12;
   --grid-max-width: 1120px;
+}
+
+.bg-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, #13102b 0%, #13102b 25%, #181435 25%, #181435 41%, #1c183d 41%, #1c183d 54%, #1e1b46 54%, #1e1b46 70%, #231f52 70%, #231f52 100%);
+  /* iOS stability */
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .container {
