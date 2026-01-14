@@ -2,7 +2,12 @@
 
 .bg-layer {
   position: fixed;
-  inset: 0;
+
+  top: calc(-1 * env(safe-area-inset-top));
+  left: calc(-1 * env(safe-area-inset-left));
+  right: calc(-1 * env(safe-area-inset-right));
+  bottom: calc(-1 * env(safe-area-inset-bottom));
+
   z-index: -1;
 
   background: linear-gradient(
@@ -19,7 +24,6 @@
     rgba(35, 31, 82, 1) 100%
   );
 
-  /* iOS stability */
   transform: translateZ(0);
   will-change: transform;
 }
