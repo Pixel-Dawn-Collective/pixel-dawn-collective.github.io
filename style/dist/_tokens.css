@@ -1,0 +1,20 @@
+:root {
+  --color-text: #ffffff;
+  --color-text-hover: #cccccc;
+  --color-bg-primary: #13102b;
+  --color-bg-secondary: #181435;
+  --color-link: #ffffff;
+  --font-base: "Montserrat", sans-serif;
+  --font-size-h2: 32px;
+  --font-size-h3-lg: 18px;
+  --font-size-h3-sm: 16px;
+  --font-size-body: 13px;
+  --font-weight-light: 300;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --grid-columns: 12;
+  --grid-max-width: 1120px;
+}

@@ -1,0 +1,43 @@
+body {
+  color: var(--color-text);
+  font-family: var(--font-base);
+  background: linear-gradient(
+    180deg,
+    rgba(19, 16, 43, 1) 0%,
+    rgba(19, 16, 43, 1) 25%,
+    rgba(24, 20, 53, 1) 25%,
+    rgba(24, 20, 53, 1) 41%,
+    rgba(28, 24, 61, 1) 41%,
+    rgba(28, 24, 61, 1) 54%,
+    rgba(30, 27, 70, 1) 54%,
+    rgba(30, 27, 70, 1) 70%,
+    rgba(35, 31, 82, 1) 70%,
+    rgba(35, 31, 82, 1) 100%
+  );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-light);
+  margin: 0;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: ease-in 200ms;
+
+  &:hover {
+    color: var(--color-text-hover);
+  }
+
+  span {
+    text-decoration: underline;
+  }
+}

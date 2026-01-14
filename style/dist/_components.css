@@ -1,0 +1,82 @@
+:root {
+  --color-text: #ffffff;
+  --color-bg-primary: #13102b;
+  --color-bg-secondary: #181435;
+  --color-link: #ffffff;
+  --font-base: "Montserrat", sans-serif;
+  --font-size-h2: 32px;
+  --font-size-h3-lg: 18px;
+  --font-size-h3-sm: 16px;
+  --font-size-body: 13px;
+  --font-weight-light: 300;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --grid-columns: 12;
+  --grid-max-width: 1120px;
+}
+
+project-card {
+  grid-column: span 3;
+  font-weight: var(--font-weight-light);
+}
+@media (max-width: 768px) {
+  project-card {
+    grid-column: span 12;
+  }
+}
+project-card h3 {
+  margin: 0 0 var(--space-xs);
+  font-weight: var(--font-weight-light);
+}
+project-card p {
+  font-size: var(--font-size-body);
+  margin: 0;
+}
+project-card .description {
+  margin: var(--space-md) 0;
+}
+project-card h3 {
+  font-size: var(--font-size-h3-lg);
+}
+
+person-card {
+  grid-column: span 3;
+  font-weight: var(--font-weight-light);
+}
+@media (max-width: 768px) {
+  person-card {
+    grid-column: span 12;
+  }
+}
+person-card h3 {
+  margin: 0 0 var(--space-xs);
+  font-weight: var(--font-weight-light);
+}
+person-card p {
+  font-size: var(--font-size-body);
+  margin: 0;
+}
+person-card .description {
+  margin: var(--space-md) 0;
+}
+person-card h3 {
+  font-size: var(--font-size-h3-sm);
+}
+
+.links {
+  display: flex;
+  gap: var(--space-sm);
+}
+.links a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}

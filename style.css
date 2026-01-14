@@ -1,15 +1,14 @@
 :root {
-  --text-color: #fff;
+  --color-text: #fff;
+  --font-base: "Montserrat", sans-serif;
 }
 
 body {
-  color: var(--text-color);
-  font-family: "Montserrat", sans-serif;
-  background: #13102b;
+  color: var(--color-text);
+  font-family: var(--font-base);
   background: linear-gradient(180deg, rgb(19, 16, 43) 0%, rgb(19, 16, 43) 25%, rgb(24, 20, 53) 25%, rgb(24, 20, 53) 41%, rgb(28, 24, 61) 41%, rgb(28, 24, 61) 54%, rgb(30, 27, 70) 54%, rgb(30, 27, 70) 70%, rgb(35, 31, 82) 70%, rgb(35, 31, 82) 100%);
-  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
+  background-repeat: no-repeat;
 }
 
 h1 {
@@ -23,96 +22,90 @@ h2 {
 }
 
 a {
-  color: var(--text-color);
+  color: var(--color-text);
+  text-decoration: none;
+}
+a span {
+  text-decoration: underline;
 }
 
 .container {
-  grid-row-gap: 48px;
-  padding: 0 24px;
-  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  gap: 48px;
   width: 100%;
   max-width: 1120px;
   margin: 48px auto;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
 header {
+  grid-column: 3/10;
   text-align: center;
-  margin: 0;
-  grid-column-start: 3;
-  grid-column-end: 10;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   header {
-    grid-column-start: 1;
-    grid-column-end: 13;
+    grid-column: 1/13;
   }
 }
 header p {
   font-size: 18px;
 }
 
-i[data-feather] {
-  width: 2em;
-  height: 2em;
-}
-
 .section-block {
-  grid-column-start: 1;
-  grid-column-end: 13;
-  gap: 32px;
+  grid-column: 1/13;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
 }
 .section-block h2 {
-  grid-column-start: 1;
-  grid-column-end: 13;
+  grid-column: 1/13;
 }
 .section-block img {
   max-width: 100%;
 }
 
-.project-item {
+person-card, project-card {
   grid-column: span 3;
   font-weight: 300;
 }
-@media screen and (max-width: 768px) {
-  .project-item {
+@media (max-width: 768px) {
+  person-card, project-card {
     grid-column: span 12;
   }
 }
-.project-item h3 {
-  font-size: 18px;
+person-card h3, project-card h3 {
   margin: 0 0 4px;
   font-weight: 300;
 }
-.project-item p {
+person-card p, project-card p {
   font-size: 13px;
   margin: 0;
 }
-.project-item .description {
+person-card .description, project-card .description {
   margin: 16px 0;
 }
 
-.person-item {
-  grid-column: span 3;
-  font-weight: 300;
+project-card h3 {
+  font-size: 18px;
 }
-@media screen and (max-width: 768px) {
-  .person-item {
-    grid-column: span 12;
-  }
-}
-.person-item h3 {
+
+person-card h3 {
   font-size: 16px;
-  margin: 0 0 4px;
-  font-weight: 300;
 }
-.person-item p {
-  font-size: 13px;
-  margin: 0;
+
+.links {
+  display: flex;
+  gap: 8px;
 }
-.person-item .description {
-  margin: 16px 0;
+.links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
 }/*# sourceMappingURL=style.css.map */
