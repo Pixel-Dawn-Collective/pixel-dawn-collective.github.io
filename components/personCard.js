@@ -1,35 +1,10 @@
-class ProjectCard extends HTMLElement {
-  connectedCallback() {
-    const image = this.getAttribute("image");
-    const title = this.getAttribute("title");
-    const description = this.getAttribute("description");
-    const href = this.getAttribute("href");
-
-    this.innerHTML = `
-          <img src="${image}" alt="${title}" />
-          <div class="description">
-            <h3>${title}</h3>
-            <p>${description}</p>
-          </div>
-          <div class="links">
-            <a href="${href}" target="_blank">
-              <img
-                src="https://cdn.simpleicons.org/github/ffffff"
-                alt="GitHub"
-                class="icon"
-              />
-              <span>View on Github</span>
-            </a>
-          </div>
-      `;
-  }
-}
 class PersonCard extends HTMLElement {
   connectedCallback() {
     const image = this.getAttribute("image");
     const name = this.getAttribute("name");
     const description = this.getAttribute("description");
     const instagram = this.getAttribute("instagram");
+    const bluesky = this.getAttribute("bluesky");
 
     this.innerHTML = `
           <img src="${image}" alt="${name}" />
@@ -45,10 +20,10 @@ class PersonCard extends HTMLElement {
                 class="icon"
               />
               <span>Instagram</span>
-            </a> / <a href="${instagram}" target="_blank" rel="noopener">
+            </a> / <a href="${bluesky}" target="_blank" rel="noopener">
               <img
                 src="https://cdn.simpleicons.org/bluesky/ffffff"
-                alt="Instagram"
+                alt="Bluesky"
                 class="icon"
               />
               <span>Bluesky</span>
@@ -59,5 +34,3 @@ class PersonCard extends HTMLElement {
 }
 
 customElements.define("person-card", PersonCard);
-
-customElements.define("project-card", ProjectCard);
