@@ -12,16 +12,16 @@
 
   background: linear-gradient(
     180deg,
-    rgba(19, 16, 43, 1) 0%,
-    rgba(19, 16, 43, 1) 25%,
-    rgba(24, 20, 53, 1) 25%,
-    rgba(24, 20, 53, 1) 41%,
-    rgba(28, 24, 61, 1) 41%,
-    rgba(28, 24, 61, 1) 54%,
-    rgba(30, 27, 70, 1) 54%,
-    rgba(30, 27, 70, 1) 70%,
-    rgba(35, 31, 82, 1) 70%,
-    rgba(35, 31, 82, 1) 100%
+    var(--background-layer-01) 0%,
+    var(--background-layer-01) 25%,
+    var(--background-layer-02) 25%,
+    var(--background-layer-02) 41%,
+    var(--background-layer-03) 41%,
+    var(--background-layer-03) 54%,
+    var(--background-layer-04) 54%,
+    var(--background-layer-04) 70%,
+    var(--background-layer-05) 70%,
+    var(--background-layer-05) 100%
   );
 
   transform: translateZ(0);
