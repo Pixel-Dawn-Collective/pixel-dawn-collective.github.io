@@ -7,12 +7,11 @@ class PersonCard extends HTMLElement {
     const bluesky = this.getAttribute("bluesky");
 
     this.innerHTML = `
-          <img src="${image}" alt="${name}" />
+          <img class="person-image" src="${image}" alt="${name}" />
           <div class="description">
             <h3>${name}</h3>
             <p>${description}</p>
-          </div>
-          <div class="links">
+            <div class="links">
             <a href="${instagram}" target="_blank" rel="noopener">
               <img
                 src="https://cdn.simpleicons.org/instagram/ffffff"
@@ -28,6 +27,7 @@ class PersonCard extends HTMLElement {
               />
               <span>Bluesky</span>
             </a>
+          </div>
           </div>
       `;
   }

@@ -1,5 +1,6 @@
 :root {
   --color-text: #ffffff;
+  --color-text-hover: #cccccc;
   --color-bg-primary: #13102b;
   --color-bg-secondary: #181435;
   --color-link: #ffffff;
@@ -11,11 +12,17 @@
   --font-weight-light: 300;
   --space-xs: 4px;
   --space-sm: 8px;
+  --space-sm-md: 12px;
   --space-md: 16px;
   --space-lg: 32px;
   --space-xl: 48px;
   --grid-columns: 12;
   --grid-max-width: 1120px;
+  --background-layer-01: rgba(19, 16, 43, 1);
+  --background-layer-02: rgba(24, 20, 53, 1);
+  --background-layer-03: rgba(28, 24, 61, 1);
+  --background-layer-04: rgba(30, 27, 70, 1);
+  --background-layer-05: rgba(35, 31, 82, 1);
 }
 
 project-card {
@@ -62,6 +69,15 @@ person-card p {
 person-card .description {
   margin: var(--space-md) 0;
 }
+@media screen and (max-width: 768px) {
+  person-card {
+    display: flex;
+    gap: var(--space-md);
+  }
+  person-card .description {
+    margin: 0;
+  }
+}
 person-card h3 {
   font-size: var(--font-size-h3-sm);
 }
@@ -69,6 +85,7 @@ person-card h3 {
 .links {
   display: flex;
   gap: var(--space-sm);
+  margin-top: var(--space-md);
 }
 .links a {
   display: inline-flex;
@@ -76,7 +93,14 @@ person-card h3 {
   gap: var(--space-sm);
 }
 
+@media screen and (max-width: 768px) {
+  .person-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+
 .icon {
-  width: 16px;
-  height: 16px;
+  width: var(--space-md);
+  height: var(--space-md);
 }

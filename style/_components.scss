@@ -11,6 +11,15 @@ project-card {
 person-card {
   @include abstracts.card-base;
 
+  @media screen and (max-width: 768px) {
+    display: flex;
+    gap: var(--space-md);
+
+    .description {
+      margin: 0;
+    }
+  }
+
   h3 {
     font-size: var(--font-size-h3-sm);
   }
@@ -19,6 +28,7 @@ person-card {
 .links {
   display: flex;
   gap: var(--space-sm);
+  margin-top: var(--space-md);
 
   a {
     display: inline-flex;
@@ -27,7 +37,14 @@ person-card {
   }
 }
 
+.person-image {
+  @media screen and (max-width: 768px) {
+    width: 120px;
+    height: 120px;
+  }
+}
+
 .icon {
-  width: 16px;
-  height: 16px;
+  width: var(--space-md);
+  height: var(--space-md);
 }
