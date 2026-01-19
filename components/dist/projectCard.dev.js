@@ -26,32 +26,34 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-var PersonCard =
+var ProjectCard =
 /*#__PURE__*/
 function (_HTMLElement) {
-  _inherits(PersonCard, _HTMLElement);
+  _inherits(ProjectCard, _HTMLElement);
 
-  function PersonCard() {
-    _classCallCheck(this, PersonCard);
+  function ProjectCard() {
+    _classCallCheck(this, ProjectCard);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(PersonCard).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(ProjectCard).apply(this, arguments));
   }
 
-  _createClass(PersonCard, [{
+  _createClass(ProjectCard, [{
     key: "connectedCallback",
     value: function connectedCallback() {
       var image = this.getAttribute("image");
-      var name = this.getAttribute("name");
+      var title = this.getAttribute("title");
       var description = this.getAttribute("description");
-      var instagram = this.getAttribute("instagram");
-      var bluesky = this.getAttribute("bluesky");
+      var href = this.getAttribute("href");
+      var titleId = "".concat(this.id, "-title");
+      var descId = "".concat(this.id, "-description");
       this.setAttribute("role", "article");
-      this.setAttribute("aria-labelledby", "".concat(this.id, "-name"));
-      this.innerHTML = "\n      <img\n        class=\"person-image\"\n        src=\"".concat(image, "\"\n        alt=\"\"\n        aria-hidden=\"true\"\n      />\n\n      <div class=\"description\">\n        <h3 id=\"").concat(this.id, "-name\">").concat(name, "</h3>\n        <p>").concat(description, "</p>\n\n        <div class=\"links\">\n          <ul>\n            <li>\n              <a\n                href=\"").concat(instagram, "\"\n                target=\"_blank\"\n                rel=\"noopener\"\n                aria-label=\"Visit ").concat(name, "'s Instagram profile (opens in a new tab)\"\n              >\n                <img\n                  src=\"https://cdn.simpleicons.org/instagram/ffffff\"\n                  alt=\"\"\n                  aria-hidden=\"true\"\n                  class=\"icon\"\n                />\n                <span>Instagram</span>\n              </a>\n              </li>\n              <li>\n              <a\n                href=\"").concat(bluesky, "\"\n                target=\"_blank\"\n                rel=\"noopener\"\n                aria-label=\"Visit ").concat(name, "'s Bluesky profile (opens in a new tab)\"\n              >\n                <img\n                  src=\"https://cdn.simpleicons.org/bluesky/ffffff\"\n                  alt=\"\"\n                  aria-hidden=\"true\"\n                  class=\"icon\"\n                />\n                <span>Bluesky</span>\n              </a>\n            </li>\n          </ul>\n        </div>\n      </div>\n    ");
+      this.setAttribute("aria-labelledby", titleId);
+      this.setAttribute("aria-describedby", descId);
+      this.innerHTML = "\n      <img\n        src=\"".concat(image, "\"\n        alt=\"\"\n        aria-hidden=\"true\"\n        class=\"project-image\"\n      />\n\n      <div class=\"description\">\n        <h3 id=\"").concat(titleId, "\">").concat(title, "</h3>\n        <p id=\"").concat(descId, "\">").concat(description, "</p>\n      </div>\n\n      <div class=\"links\">\n        <a\n          href=\"").concat(href, "\"\n          target=\"_blank\"\n          rel=\"noopener\"\n          aria-label=\"View ").concat(title, " project on GitHub (opens in a new tab)\"\n        >\n          <img\n            src=\"https://cdn.simpleicons.org/github/ffffff\"\n            alt=\"\"\n            aria-hidden=\"true\"\n            class=\"icon\"\n          />\n          <span>View on GitHub</span>\n        </a>\n      </div>\n    ");
     }
   }]);
 
-  return PersonCard;
+  return ProjectCard;
 }(_wrapNativeSuper(HTMLElement));
 
-customElements.define("person-card", PersonCard);
+customElements.define("project-card", ProjectCard);

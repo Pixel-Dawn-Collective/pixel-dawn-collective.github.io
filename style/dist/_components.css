@@ -1,5 +1,6 @@
 :root {
   --color-text: #ffffff;
+  --color-primary: #663291;
   --color-text-hover: #cccccc;
   --color-bg-primary: #13102b;
   --color-bg-secondary: #181435;
@@ -26,13 +27,10 @@
 }
 
 project-card {
-  grid-column: span 3;
+  display: block;
+  max-width: 100%;
+  min-width: 0;
   font-weight: var(--font-weight-light);
-}
-@media (max-width: 768px) {
-  project-card {
-    grid-column: span 12;
-  }
 }
 project-card h3 {
   margin: 0 0 var(--space-xs);
@@ -50,13 +48,10 @@ project-card h3 {
 }
 
 person-card {
-  grid-column: span 3;
+  display: block;
+  max-width: 100%;
+  min-width: 0;
   font-weight: var(--font-weight-light);
-}
-@media (max-width: 768px) {
-  person-card {
-    grid-column: span 12;
-  }
 }
 person-card h3 {
   margin: 0 0 var(--space-xs);
@@ -69,35 +64,44 @@ person-card p {
 person-card .description {
   margin: var(--space-md) 0;
 }
+person-card h3 {
+  font-size: var(--font-size-h3-sm);
+}
+person-card .description {
+  flex: 1;
+  min-width: 0;
+}
 @media screen and (max-width: 768px) {
   person-card {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: var(--space-md);
-  }
-  person-card .description {
-    margin: 0;
+    flex-wrap: nowrap;
   }
 }
-person-card h3 {
-  font-size: var(--font-size-h3-sm);
+
+project-card,
+person-card {
+  max-width: 100%;
+  min-width: 0;
 }
 
 .links {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--space-sm);
   margin-top: var(--space-md);
 }
-.links a {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-sm);
+.links a span {
+  overflow-wrap: anywhere;
 }
 
-@media screen and (max-width: 768px) {
-  .person-image {
-    width: 120px;
-    height: 120px;
-  }
+.person-image {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  object-fit: cover;
 }
 
 .icon {

@@ -11,37 +11,46 @@ project-card {
 person-card {
   @include abstracts.card-base;
 
-  @media screen and (max-width: 768px) {
-    display: flex;
-    gap: var(--space-md);
-
-    .description {
-      margin: 0;
-    }
-  }
-
   h3 {
     font-size: var(--font-size-h3-sm);
   }
+
+  .description {
+    flex: 1;
+    min-width: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-md);
+    flex-wrap: nowrap;
+  }
+}
+
+project-card,
+person-card {
+  max-width: 100%;
+  min-width: 0;
 }
 
 .links {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--space-sm);
   margin-top: var(--space-md);
 
-  a {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-sm);
+  a span {
+    overflow-wrap: anywhere;
   }
 }
 
 .person-image {
-  @media screen and (max-width: 768px) {
-    width: 120px;
-    height: 120px;
-  }
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  object-fit: cover;
 }
 
 .icon {

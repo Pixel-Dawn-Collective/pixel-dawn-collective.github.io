@@ -8,10 +8,12 @@
     />
     <meta name="author" content="Pixel Dawn Collective" />
     <meta
-      keywords="pixel dawn, developers, software house, apps, ios, android, tabletop, rpg, card games"
+      name="keywords"
+      content="pixel dawn, developers, software house, apps, ios, android, tabletop, rpg, card games"
     />
     <meta
-      description="Pixel Dawn Collective is a passionate group of human-crafted developers building web, iOS, and Android apps dedicated to RPGs and tabletop games."
+      name="description"
+      content="Pixel Dawn Collective is a passionate group of human-crafted developers building web, iOS, and Android apps dedicated to RPGs and tabletop games."
     />
 
     <link rel="icon" type="image/png" href="images/favicon.png" />
@@ -27,10 +29,11 @@
     <title>Pixel Dawn Collective</title>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <div class="bg-layer" aria-hidden="true"></div>
     <div class="container">
       <header>
-        <img src="images/logo.png" alt="Pixel Dawn Collective Logo" />
+        <img src="images/logo.svg" alt="Pixel Dawn Collective Logo" />
         <h1>Pixel Dawn Collective</h1>
         <p>
           Pixel Dawn Collective is a passionate group of human-crafted
@@ -39,50 +42,125 @@
         </p>
       </header>
 
-      <section id="projects" class="section-block">
-        <h2>Our Projects</h2>
+      <main id="main">
+        <section
+          id="projects"
+          class="section-block"
+          aria-labelledby="projects-title"
+        >
+          <h2>Our Projects</h2>
 
-        <project-card
-          image="images/daggersheet.png"
-          title="Daggersheet"
-          description="Daggersheet is an app for iOS and Android for managing your RPG sheets for the Daggerheart system, with a system of leveling up, health and fear management, and more."
-          href="https://github.com/Pixel-Dawn-Collective/Daggersheet"
-        ></project-card>
+          <project-card
+            image="images/daggersheet.png"
+            title="Daggersheet"
+            description="Daggersheet is an app for iOS and Android for managing your RPG sheets for the Daggerheart system, with a system of leveling up, health and fear management, and more."
+            href="https://github.com/Pixel-Dawn-Collective/Daggersheet"
+          ></project-card>
 
-        <project-card
-          image="images/stageforge.png"
-          title="StageForge"
-          description="StageForge is a web app for displaying your characters and scenarios for your RPG gaming sessions, like a visual novel, bringing a whole new level of immersion in your table."
-          href="https://github.com/Pixel-Dawn-Collective/StageForge"
-        ></project-card>
+          <project-card
+            image="images/stageforge.png"
+            title="StageForge"
+            description="StageForge is a web app for displaying your characters and scenarios for your RPG gaming sessions, like a visual novel, bringing a whole new level of immersion in your table."
+            href="https://github.com/Pixel-Dawn-Collective/StageForge"
+          ></project-card>
 
-        <project-card
-          image="images/moodforge.png"
-          title="MoodForge"
-          description=" Moodforge is a web app designed for sound ambience in RPG sessions. It allows you to control soundtracks and sound effects, with a strong focus on immersion during gameplay."
-          href="https://github.com/Pixel-Dawn-Collective/MoodForge"
-        ></project-card>
-      </section>
+          <project-card
+            image="images/moodforge.png"
+            title="MoodForge"
+            description=" Moodforge is a web app designed for sound ambience in RPG sessions. It allows you to control soundtracks and sound effects, with a strong focus on immersion during gameplay."
+            href="https://github.com/Pixel-Dawn-Collective/MoodForge"
+          ></project-card>
+        </section>
 
-      <section id="weare" class="section-block">
-        <h2>Who We Are</h2>
+        <section
+          id="weare"
+          class="section-block"
+          aria-labelledby="we-are-title"
+        >
+          <h2>Who We Are</h2>
 
-        <person-card
-          image="images/person-julia.png"
-          name="Júlia Alberto"
-          description="Julia is a 32-year-old trans girl, nerd, designer, RPG game master, collector of retro games and fantasy books, and guitarist in her spare time."
-          instagram="https://instagram.com/juliaisaway_"
-          bluesky="https://bsky.app/profile/eusoujulia.com.br"
-        ></person-card>
+          <person-card
+            image="images/person-julia.png"
+            name="Júlia Alberto"
+            description="Julia is a 32-year-old trans girl, nerd, designer, RPG game master, collector of retro games and fantasy books, and guitarist in her spare time."
+            instagram="https://instagram.com/juliaisaway_"
+            bluesky="https://bsky.app/profile/eusoujulia.com.br"
+          ></person-card>
 
-        <person-card
-          image="images/person-aurora.png"
-          name="Aurora Kruschewsky"
-          description="Aurora is a 21-year-old trans girl, nerd, front-end developer, avid reader, who enjoys rhythm games, potatoes and his wife."
-          instagram="https://instagram.com/aurorossi174"
-          bluesky="https://bsky.app/profile/aurorinhafofa.bsky.social"
-        ></person-card>
-      </section>
+          <person-card
+            image="images/person-aurora.png"
+            name="Aurora Kruschewsky"
+            description="Aurora is a 21-year-old trans girl, nerd, front-end developer, avid reader, who enjoys rhythm games, potatoes and his wife."
+            instagram="https://instagram.com/aurorossi174"
+            bluesky="https://bsky.app/profile/aurorinhafofa.bsky.social"
+          ></person-card>
+        </section>
+
+        <section
+          id="contact"
+          class="section-block"
+          aria-labelledby="contact-title"
+        >
+          <h2 id="contact-title">Let’s build something together</h2>
+
+          <div class="contact-info">
+            <p>
+              We’re open for freelance work, partnerships, and collaborations.
+            </p>
+
+            <address class="contact-links">
+              <ul>
+                <li>
+                  <a
+                    href="mailto:pixeldawncollective@gmail.com"
+                    aria-label="Send an email to Pixel Dawn Collective"
+                  >
+                    <img
+                      src="https://cdn.simpleicons.org/mail.ru/ffffff"
+                      alt=""
+                      aria-hidden="true"
+                      class="icon"
+                    />
+                    <span>pixeldawncollective@gmail.com</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/Pixel-Dawn-Collective"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Visit Pixel Dawn Collective on GitHub (opens in a new tab)"
+                  >
+                    <img
+                      src="https://cdn.simpleicons.org/github/ffffff"
+                      alt=""
+                      aria-hidden="true"
+                      class="icon"
+                    />
+                    <span>GitHub</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://bsky.app/profile/pixeldawn.bsky.social"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Visit Pixel Dawn Collective on Bluesky (opens in a new tab)"
+                  >
+                    <img
+                      src="https://cdn.simpleicons.org/bluesky/ffffff"
+                      alt=""
+                      aria-hidden="true"
+                      class="icon"
+                    />
+                    <span>Bluesky</span>
+                  </a>
+                </li>
+              </ul>
+            </address>
+          </div>
+        </section>
+      </main>
     </div>
   </body>
 </html>

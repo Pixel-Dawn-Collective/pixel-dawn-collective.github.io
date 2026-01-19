@@ -1,12 +1,10 @@
 @use "tokens";
 
 @mixin card-base {
-  grid-column: span 3;
+  display: block;
+  max-width: 100%;
+  min-width: 0;
   font-weight: var(--font-weight-light);
-
-  @media (max-width: tokens.$breakpoint-sm) {
-    grid-column: span 12;
-  }
 
   h3 {
     margin: 0 0 var(--space-xs);
