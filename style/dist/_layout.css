@@ -15,6 +15,7 @@
   --space-sm: 8px;
   --space-sm-md: 12px;
   --space-md: 16px;
+  --space-md-lg: 24px;
   --space-lg: 32px;
   --space-xl: 48px;
   --grid-columns: 12;
@@ -45,7 +46,7 @@
   width: 100%;
   max-width: var(--grid-max-width);
   margin: var(--space-xl) auto;
-  padding: 0 var(--space-md);
+  padding: 0 var(--space-md-lg);
   box-sizing: border-box;
 }
 @media (min-width: 768px) {

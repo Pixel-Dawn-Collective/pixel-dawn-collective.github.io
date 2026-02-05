@@ -35,7 +35,7 @@
   width: 100%;
   max-width: var(--grid-max-width);
   margin: var(--space-xl) auto;
-  padding: 0 var(--space-md);
+  padding: 0 var(--space-md-lg);
   box-sizing: border-box;
 
   @media (min-width: tokens.$breakpoint-sm) {
